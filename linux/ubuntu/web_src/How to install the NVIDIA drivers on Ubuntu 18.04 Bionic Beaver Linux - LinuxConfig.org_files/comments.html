@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!-- saved from url=(0156)https://forum.linuxconfig.org/embed/comments?embed_url=https%3A%2F%2Flinuxconfig.org%2Fhow-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux -->
+<html class="discoursecomm"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<link href="./embed_47ac9eb963925417a5b04ba7ebe636f96508c1e9.css" media="all" rel="stylesheet" data-target="embed">
+<link rel="preload" href="./break_string-cc617154cd957804f2f6a1f3bc68258c9cdca3d4b9a322bf777d145fed04790e.js" as="script">
+<script src="./break_string-cc617154cd957804f2f6a1f3bc68258c9cdca3d4b9a322bf777d145fed04790e.js" type="text/javascript"></script>
+<title>How to install the NVIDIA drivers on Ubuntu 18.04 Bionic Beaver Linux - LinuxConfig.org - LinuxConfig.org Articles - Linux Config Forum</title>
+<script type="text/javascript">
+      (function() {
+
+        function postUp(msg) {
+          if (parent) {
+            parent.postMessage(msg, 'https://linuxconfig.org/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux');
+          }
+        }
+
+        function clickPostLink(e) {
+          var postId = e.target.getAttribute('data-link-to-post');
+          if (postId) {
+            var postElement = document.getElementById('post-' + postId);
+            if (postElement) {
+              var rect = postElement.getBoundingClientRect();
+              if (rect && rect.top) {
+                postUp({type: 'discourse-scroll', top: rect.top});
+                e.preventDefault();
+                return false;
+              }
+            }
+          }
+        }
+
+        window.onload = function() {
+          // get state info from data attribute
+          var header = document.querySelector('header');
+          var state = 'unknown';
+          if (header) {
+            state = header.getAttribute('data-embed-state');
+          }
+	  
+          // Send a post message with our loaded height and state
+          postUp({type: 'discourse-resize', height: document['body'].offsetHeight, state: state});
+
+          var postLinks = document.querySelectorAll("a[data-link-to-post]"),
+              i;
+
+          for (i=0; i<postLinks.length; i++) {
+            postLinks[i].onclick = clickPostLink;
+          }
+
+          // Make sure all links in the iframe point to _blank
+          var cookedLinks = document.querySelectorAll('.cooked a');
+          for (i=0; i<cookedLinks.length; i++) {
+            cookedLinks[i].target = "_blank";
+          }
+
+          // Adjust all names
+          var names = document.querySelectorAll('.username a');
+          for (i=0; i<names.length; i++) {
+            var username = names[i].innerHTML;
+            if (username) {
+              names[i].innerHTML = new BreakString(username).break();
+            }
+          }
+
+        };
+
+      })();
+    </script>
+</head>
+<body>
+<header class="discourse" data-embed-state="loaded">
+<a class="button" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/2">Continue Discussion</a>
+<span class="replies">18 replies</span>
+</header>
+<article class="post" id="post-3222">
+<a title="July  4, 2018  1:55am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/2"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Sorin255</strong></p>
+<p>Having issues with the second option.</p>
+<p>The process hangs at 87% complete at:</p>
+<p>writing new private key to <code>/var/lib/shim-signed/mok/MOK.priv</code></p>
+<a data-link-to-post="3223" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/2" target="_blank">1 reply</a>
+</div>
+</article>
+<article class="post" id="post-3223">
+<a title="July  4, 2018  1:56am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/3"> 4 Jul</a>
+<a data-link-to-post="3222" class="in-reply-to" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/2">▶ AutoPublisher</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Jhonny Moreira -&gt; Sorin255</strong></p>
+<p>For what I’ve been reading, it seems that you should type your current user password twice:</p>
+<p><code>https://devtalk.nvidia.com/default/topic/1036167/stuck-trying-to-intall-nvidia-390-ubuntu-18-04-lts-/</code></p>
+</div>
+</article>
+<article class="post" id="post-3224">
+<a title="July  4, 2018  1:57am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/4"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>shiromar</strong></p>
+<p>after reading about 50 different ways of installing these drivers. This one finally did it.</p>
+<p>I did have to use the “Manual Install using the Official <a href="http://nvidia.com/" target="_blank">Nvidia.com</a> driver”</p>
+<p>though, I couldn’t find any drivers with *.bin. Just used the .run supplied by nvidia.</p>
+<p><code>sudo ./NV***.run</code></p>
+<p>it did complain about the compiler being written for 7.2 and the installed was 7.33 iirc.</p>
+<p>I ignored that and continued on. Installed 32bit extras. After reboot I ran</p>
+<p><code>$ glxinfo|egrep "OpenGL vendor|OpenGL renderer"</code></p>
+<p>Very happy to see:</p>
+<pre><code>OpenGL vendor string: NVIDIA Corporation
+OpenGL renderer string: GeForce GTX 1050 Ti/PCIe/SSE2
+</code></pre>
+<p>I tried the Anton drivers from his PPA and they installed but the OpenGL vendor was VMware.</p>
+<p>Anyway big thanks, I see why Linus gave them the middle finger, does there really need to be so much BS installing a driver…</p>
+</div>
+</article>
+<article class="post" id="post-3225">
+<a title="July  4, 2018  1:57am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/5"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Patrick</strong></p>
+<p>Hi,</p>
+<p>I would like to install either Ubuntu or<br>
+Opensuse last versions on a old laptop which is equipped with Nvidia<br>
+Geforce 310M graphic card. I was wondering if I will encounter any<br>
+problems (unrecognized graphic card) installing one of the distributions<br>
+quoted above. My laptop (Asus U36JC) has an old CPU a Core I5 480m. I<br>
+guess that it has enough for Ubuntu or Opensuse.</p>
+<p>Thanks in advance for your precious advices.</p>
+</div>
+</article>
+<article class="post" id="post-3226">
+<a title="July  4, 2018  1:58am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/6"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Андрей (TyroSpy)</strong></p>
+<p>On my GTX1050 black screen after reboot</p>
+<a data-link-to-post="3227" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/6" target="_blank">1 reply</a>
+</div>
+</article>
+<article class="post" id="post-3227">
+<a title="July  4, 2018  1:58am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/7"> 4 Jul</a>
+<a data-link-to-post="3226" class="in-reply-to" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/6">▶ AutoPublisher</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>egermano -&gt; Андрей (TyroSpy)</strong></p>
+<p>Me too</p>
+</div>
+</article>
+<article class="post" id="post-3228">
+<a title="July  4, 2018  1:58am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/8"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Matt Stimpson</strong></p>
+<p>I got half way through this install … it didnt work and now I cant download the nvidia app from software. How do I undo the depository?</p>
+<a data-link-to-post="3956" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/8" target="_blank">1 reply</a>
+</div>
+</article>
+<article class="post" id="post-3229">
+<a title="July  4, 2018  1:59am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/9"> 4 Jul</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>alex73</strong></p>
+<p>It’s fake. Ubuntu 18.04 doesn’t contain nvidia-304 package, ppa:graphics-drivers/ppa doesn’t contain packages for 18.04, old packages for 17.10 contains dependency issues for 18.04.<br>
+NVidia proprietarty driver can’t be compiled in 18.04 without patches.<br>
+So, all these advices just don’t work.</p>
+<a data-link-to-post="3230" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/9" target="_blank">1 reply</a>
+</div>
+</article>
+<article class="post" id="post-3230">
+<a title="July  4, 2018  1:59am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/10"> 4 Jul</a>
+<a data-link-to-post="3229" class="in-reply-to" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/9">▶ AutoPublisher</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>deaz97 -&gt; alex73</strong></p>
+<p>I just installed that driver following these instructions. It worked perfectly. Did you even try to do it?</p>
+<a data-link-to-post="3231" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/10" target="_blank">1 reply</a>
+</div>
+</article>
+<article class="post" id="post-3231">
+<a title="July  4, 2018  2:00am" class="post-date" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/11"> 4 Jul</a>
+<a data-link-to-post="3230" class="in-reply-to" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/10">▶ AutoPublisher</a>
+<div class="author">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank"><img src="./114_1.png" alt=""></a>
+</div>
+<div class="cooked">
+<h3 class="username">
+<a href="https://forum.linuxconfig.org/u/AutoPublisher" target="_blank" class="staff">Auto<wbr>​Publisher</a>
+</h3>
+<p><strong>Tim Josling -&gt; deaz97</strong></p>
+<p>Works with the latest driver from nvidia as at 20 May 2018.</p>
+<a data-link-to-post="3232" class="post-replies button" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/11" target="_blank">1 reply</a>
+</div>
+</article>
+<footer class="clearfix">
+<a target="_blank" href="https://forum.linuxconfig.org/"><img class="logo" src="./517805722442d406fee6ed0d6c638be5c1c0c5e3.png"></a>
+<a class="button" target="_blank" href="https://forum.linuxconfig.org/t/how-to-install-the-nvidia-drivers-on-ubuntu-18-04-bionic-beaver-linux-linuxconfig-org/1753/11">Continue Discussion</a>
+<span class="replies">8 more replies</span>
+</footer>
+<div class="clearfix"></div>
+
+
+</body></html>

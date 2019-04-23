@@ -1,0 +1,135 @@
+* １.　sudo lshw -short -C memory (check ram info)
+
+* ２.　shadowsocks-qt5 installation:
+```
+shadowsocks-qt5 需要通过PPA源安装，仅支持Ubuntu 14.04或更高版本。
+1、设置 PPA 源并安装 shadowsocks-qt5
+
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+2、安装过程遇到 libappindicator1 依赖问题（dependency problems），而 libappindicator1 又遇到 libindicator7 依赖的解决办法。一并安装 libappindicator1 libindicator7 依赖，再重新安装 shadowsocks-qt5。
+
+sudo apt-get -f install libappindicator1 libindicator7
+3、完成后就可以打开 shadowsocks-qt5
+
+--------------------------------------------------------------------------------------------
+使用Ubnutu18.04安装Shadowsocks-Qt5时
+
+同样使用
+
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+
+添加源，但是ppa:hzwhuang/ss-qt5 并没有18.04版本的源，所以再执行update时会出现
+
+E: 仓库 “http://ppa.launchpad.net/hzwhuang/ss-qt5/ubuntu bionic Release” 没有 Release 文件 的错误。
+
+这时，只要编辑/etc/apt/sources.list.d/hzwhuang-ubuntu-ss-qt5-bionic.list 文件，将bionic (18.04版本代号)改成xenial（16.04版本代号）。
+
+然后再执行
+
+sudo apt-get update
+
+成功之后就是
+
+sudo apt-get install shadowsocks-qt5 
+
+完成。
+
+```
+
+３.　Turn off ubuntu terminal BELL-sound
+vim /etc/inputrc uncomment "set bell-style none"
+
+4. Change icon and theme
+sudo apt-get install gnome-tweak-tool
+
+5. 32bit system supports larger memory
+```
+开启PAE
+
+需要安装支持PAE的内核
+sudo apt-get install linux-generic-pae 
+
+sudo apt-get install linux-image-generic-pae 
+
+sudo apt-get install linux-headers-generic-pae
+
+请务必别漏了安装 linux-headers-generic-pae，否则会导致缺少内核模块，如无法启动VirtualBox虚拟机
+--------------------- 
+作者：sam喵喵 
+来源：CSDN 
+原文：https://blog.csdn.net/zhaomininternational/article/details/41862325 
+版权声明：本文为博主原创文章，转载请附上博文链接！
+```
+
+6. Change time zone
+sudo tzselect
+
+７.　Change launcher position
+gsettings set com.canonical.Unity.Launcher launcher-position Bottom
+
+8. Change default browser for jupyter-notebook
+```
+
+
+You can create jupyter_notebook_config.py by:
+
+jupyter notebook --generate-config
+
+Then you go to
+
+~/.jupyter/jupyter_notebook_config.py
+
+and change
+
+# c.NotebookApp.browser = ''
+
+to for example:
+
+c.NotebookApp.browser = '/usr/bin/google-chrome'
+
+You can choose which ever browser is installed. You'll find the path for example by typing which firefox Do not forget to delete the #
+
+```
+
+9. add input method
+sudo apt-get install ibus-table-wubi
+
+10. how to create a startup live linux usb drive
+- http://live.learnfree.eu/
+- http://liveusb.info/dotclear/
+
+11. how to customize bash prompt
+- Check current $PS1  - echo $PS1
+- https://www.ostechnix.com/hide-modify-usernamelocalhost-part-terminal/
+- https://www.tecmint.com/customize-bash-colors-terminal-prompt-linux/
+
+12. how to make default directory when hoening terminal
+- Go to home directory
+- vim .bashrc, adding { cd ~/WorkSpace }
+- source .bashrc
+
+13. how to adjust the trackpoint(thinkpad) or pointing_stick(dell)
+- xinput list --short
+- xinput list-props id
+- xinput set-float-prop id prop-id value
+
+14. how to `SMART` your disk
+- sudo apt-get install smartmontools
+- sudo smartctl -i /dev/sdX
+- sudo smartctl -t short -a /dev/sdX
+- sudo smartctl -t long -a /dev/sdX
+
+
+15. how to `temperature` your machine
+- sudo apt-get install lm-sensors     # installl 
+- sudo sensors-detect                 # configure
+- sensors                             # run
+
+16. how to detect GPT on ubuntu
+
+- gdisk   sudo gdisk -l /dev/sdx
+- parted  sudo parted /dev/sdx print | grep -i '^Partition Table'
+- fdisk   sudo fdisk -l WARNING: GPT (GUID Partition Table) detected on '/dev/sda'! The util fdisk doesn't support GPT. Use GNU Parted.
+

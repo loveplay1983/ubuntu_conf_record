@@ -1,0 +1,6 @@
+1. unetbootin cannot detect usb thumbdrive when burning img to it
+mount the specific drive then do the following command in terminal
+sudo unetbootin installtype=USB targetdrive=/dev/sdg1
+
+2. how to make persistent live usb 
+https://askubuntu.com/questions/962727/startup-disk-creator-in-lubuntu-16-04-making-usb-read-only-no-persistent-storag
