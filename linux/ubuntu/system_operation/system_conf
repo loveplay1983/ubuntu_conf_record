@@ -133,3 +133,7 @@ sudo apt-get install ibus-table-wubi
 - parted  sudo parted /dev/sdx print | grep -i '^Partition Table'
 - fdisk   sudo fdisk -l WARNING: GPT (GUID Partition Table) detected on '/dev/sda'! The util fdisk doesn't support GPT. Use GNU Parted.
 
+17. how to check video card and its multiple interface on your machine
+- lspci -k | grep -A 2 -i "VGA"
+- nvidia-settings
+
