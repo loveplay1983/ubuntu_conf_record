@@ -137,3 +137,6 @@ sudo apt-get install ibus-table-wubi
 - lspci -k | grep -A 2 -i "VGA"
 - nvidia-settings
 
+18. how to check memory info
+- sudo dimdecode -t memory
+
